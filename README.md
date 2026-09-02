@@ -61,7 +61,7 @@ metodología, calidad de datos, EDA con hallazgos e interpretación,
 feature engineering, diseño y comparación de los dos modelos,
 evaluación estadística, plan de validación, MLflow, y limitaciones—:
 
-**👉 [Consultar el Informe Técnico completo](reports/TECHNICAL_REPORT.md)**
+**👉 [Consultar el Informe Técnico completo](reports/README.md)**
 
 Documentación complementaria:
 - [`docs/VALIDATION_PLAN.md`](docs/VALIDATION_PLAN.md) — plan de
@@ -128,7 +128,7 @@ ShopSmart-Recommender/
 │
 ├── models/                         # Modelos entrenados serializados (.joblib)
 ├── reports/
-│   ├── TECHNICAL_REPORT.md          # Informe técnico integral (documento maestro)
+│   ├── README.md                     # Informe técnico integral (documento maestro)
 │   ├── figures/                      # Gráficos exportados desde los notebooks
 │   └── powerbi/                       # Reservado para el informe de Power BI (a cargo del equipo)
 │
