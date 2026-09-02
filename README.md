@@ -192,7 +192,7 @@ jupyter notebook notebooks/01_data_quality_eda.ipynb
 Numerados y secuenciales: `01` (calidad de datos + EDA) → `02`
 (feature engineering) → `03` (modelado) → `04` (evaluación formal +
 plan de validación). El detalle narrativo de cada uno está en el
-[informe técnico](reports/TECHNICAL_REPORT.md).
+[informe técnico](reports/README.md).
 
 ### 5. Explorar el historial de MLflow
 
