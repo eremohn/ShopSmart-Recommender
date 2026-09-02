@@ -1,0 +1,18 @@
+# Configuración centralizada del proyecto ShopSmart Recommender
+# Todas las rutas son relativas a la raíz del proyecto.
+
+paths:
+  data_raw_products: "data/raw/products/products.csv"
+  data_raw_reviews: "data/raw/reviews/reviews.csv"
+  data_interim: "data/interim/"
+  data_processed_products: "data/processed/products_clean.csv"
+  data_processed_reviews: "data/processed/reviews_clean.csv"
+  reports_figures: "reports/figures/"
+  reports_powerbi: "reports/powerbi/"
+
+random_seed: 42
+
+data_quality:
+  outlier_method: "iqr"          # iqr | zscore
+  iqr_multiplier: 1.5
+  low_review_count_threshold: 5   # productos con < 5 reseñas -> "cold start"

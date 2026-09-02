@@ -1,0 +1,47 @@
+# Product Data Columns
+* s.no – Serial number of the product entry.
+* about_item – Short description of the product.
+* asin – Unique Amazon Standard Identification Number.
+* availability – Availability status of the product.
+* best_sellers_rank – Product ranking in Amazon’s best sellers.
+* brand_name – Name of the brand.
+* brand_page_url – URL to the brand’s page.
+* breadcrumbs – Category navigation trail.
+* customer_review_summary – Summary of customer reviews.
+* default_variant/0, 1, 2 – Different product variations.
+* delivery_date – Expected delivery date.
+* fastest_delivery_date – Earliest available delivery date.
+* list_price – Original price before discounts.
+* manufacturer – Name of the manufacturer.
+* model_number – Product model number.
+* price_value – Current selling price.
+* product_description – Detailed product description.
+* product_url – Amazon product page link.
+* rating_count – Total number of ratings.
+* rating_distribution/1star - 5star – Breakdown of ratings by stars.
+* rating_stars – Average product rating.
+* recent_purchases – Recent purchase count.
+* scrape_time – Timestamp when the data was collected.
+* seller_name – Name of the seller.
+* seller_page_url – URL to the seller’s page.
+* title – Product title.
+* all_images – Links to product images.
+* rank_1 – Product’s rank in its category.
+
+# Review Data Columns
+* s.no – Serial number of the record.
+* helpfulVote – Number of users who found the review helpful.
+* images/0 … images/7 – Links or placeholders for up to 8 review images.
+* productASIN – Amazon Standard Identification Number of the product.
+* productVariant – Variant details such as color, size, etc.
+* rating – Rating given by the user (1–5 stars).
+* reviewID – Unique identifier for the review.
+* reviewMetadata – Metadata such as country and date of review.
+* reviewPosition – Position/order of the review (if available).
+* reviewText – Full textual content of the review.
+* reviewTitle – Title/summary of the review.
+* reviewURL – Direct URL link to the review on Amazon.
+* verifiedPurchase – Whether the purchase was verified (TRUE/FALSE).
+* videos/0 – Links or placeholders for video reviews (if any).
+* cleaned_review_text – Preprocessed/cleaned version of the review text (lowercased, stopwords removed, etc.).
+* sentiment_score – Sentiment score derived from the cleaned review text (range 0–1).

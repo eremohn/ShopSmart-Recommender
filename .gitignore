@@ -1,0 +1,41 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.pytest_cache/
+
+# NOTA IMPORTANTE: a diferencia de un proyecto de ML típico, este
+# repositorio SÍ versiona `data/raw/`, `data/processed/` y `models/`.
+# Son datasets públicos y de tamaño moderado (~15 MB los datos +
+# ~8 MB los modelos serializados), y la demo de Streamlit (`app.py`)
+# necesita esos artefactos ya entrenados presentes en el repo para
+# funcionar apenas se despliega, sin depender de reentrenar el pipeline
+# en el servicio de hosting.
+#
+# Si el pipeline crece o se usan datos privados/pesados en el futuro,
+# reintroducir aquí las reglas de exclusión estándar
+# (data/raw/*, data/processed/*, models/*.joblib) y usar Git LFS o un
+# artifact store externo (S3, DVC) en su lugar.
+
+# MLflow: los artefactos de cada run (duplicados de los .joblib) no se
+# versionan; el historial de runs queda en mlflow.db (SÍ versionado).
+mlruns/
+mlartifacts/
+
+# Entorno / secretos
+.env
+*.env
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Sistema operativo / editor
+.DS_Store
+.vscode/
+.idea/

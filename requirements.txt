@@ -1,0 +1,30 @@
+# --- Núcleo de análisis de datos ---
+pandas>=2.2,<2.4
+numpy>=1.26,<2.5
+scipy>=1.13,<1.18
+
+# --- Visualización ---
+matplotlib>=3.8,<3.11
+seaborn>=0.13,<0.14
+missingno==0.5.2
+wordcloud>=1.9,<2.0
+plotly>=5.22,<6.0
+
+# --- Machine learning (etapa 1 y 2) ---
+scikit-learn>=1.4,<1.9
+
+# --- Notebooks ---
+jupyter==1.0.0
+jupytext>=1.16,<2.0
+ipykernel>=6.29
+
+# --- Utilidades de texto ---
+ftfy>=6.2,<7.0
+
+# --- Etapa 2: reproducibilidad y despliegue ---
+mlflow>=3.0,<4.0
+streamlit>=1.40,<2.0
+joblib>=1.4
+
+# --- Testing ---
+pytest>=8.0

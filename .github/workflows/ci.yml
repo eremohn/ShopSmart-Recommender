@@ -1,0 +1,45 @@
+name: CI
+
+# Se ejecuta en cada push o pull request que toque código o dependencias,
+# validando que el proyecto siga siendo reproducible: instala el entorno
+# desde cero y corre el suite de tests completo, incluyendo el test de
+# integración del pipeline end-to-end (src/pipeline/train_pipeline.py).
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "tests/**"
+      - "requirements.txt"
+      - ".github/workflows/ci.yml"
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: Ejecutar suite de tests (incluye el pipeline end-to-end)
+        run: pytest tests/ -v
+
+      - name: Verificar sintaxis de la demo Streamlit
+        run: python -m py_compile app.py
