@@ -35,7 +35,7 @@ resuelve esto con un enfoque **híbrido basado en producto**: contenido
 (marca, categoría, texto) + una señal colaborativa-implícita agregada
 por producto (rating bayesiano, sentimiento, volumen de reseñas). El
 razonamiento completo de esta decisión está en la
-[sección 2 del informe técnico](reports/TECHNICAL_REPORT.md#2-contexto-y-problema-de-negocio).
+[sección 2 del informe técnico](reports/README.md#2-contexto-y-problema-de-negocio).
 
 ## 🧪 Resultado principal
 
